@@ -1,0 +1,90 @@
+.roistat {
+	margin-bottom: 120px;
+	&__body {
+		border-radius: 20px;
+		overflow: hidden;
+		display: flex;
+	}
+	&__content {
+		padding: 50px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		background: var(--main-blue-color);
+		gap: 50px;
+		max-height: 476px;
+	}
+	&__title {
+		font-size: 38px;
+		line-height: 120%;
+		font-weight: 600;
+		color: var(--white-color);
+		margin-bottom: 24px;
+	}
+	&__subtitle {
+		font-size: 24px;
+		line-height: 150%;
+		font-weight: 500;
+		color: var(--white-color);
+	}
+	&__form {
+		max-width: 100%;
+	}
+}
+
+@media (max-width: 1220px) {
+	.roistat {
+		margin-bottom: 80px;
+		&__container {
+			max-width: 768px;
+		}
+		&__body {
+			flex-direction: column;
+		}
+		&__image {
+			display: none;
+		}
+		&__content {
+			max-height: unset;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.roistat {
+		margin-bottom: 60px;
+		&__form {
+			background: transparent;
+		}
+		&__button {
+			border: 1px solid var(--white-color);
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.roistat {
+		&__content {
+			padding: 30px;
+			gap: 30px;
+		}
+		&__title {
+			font-size: 24px;
+			line-height: 120%;
+			margin-bottom: 14px;
+		}
+		&__subtitle {
+			font-size: 18px;
+			line-height: 120%;
+		}
+	}
+}
+
+@media (max-width: 410px) {
+	.roistat {
+		&__content {
+			padding: 20px;
+			gap: 20px;
+		}
+	}
+}

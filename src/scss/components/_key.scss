@@ -1,0 +1,38 @@
+.key {
+	margin-bottom: 160px;
+	&__title {
+		text-align: left;
+	}
+	&__body {
+		display: flex;
+		align-items: center;
+	}
+}
+
+@media (max-width: 1024px) {
+	.key {
+		margin-bottom: 120px;
+		&__body {
+			flex-direction: column;
+		}
+		&__container {
+			max-width: 808px;
+		}
+		&__image {
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.key {
+		margin-bottom: 80px;
+	}
+}
+
+@media (max-width: 768px) {
+	.key {
+		margin-bottom: 60px;
+	}
+}

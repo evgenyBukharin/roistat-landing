@@ -1,0 +1,135 @@
+.cases {
+	margin-bottom: 160px;
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__title {
+		margin-bottom: 24px;
+	}
+	&__link {
+		color: var(--main-blue-color);
+		text-decoration: none;
+		font-weight: 500;
+		margin-bottom: 80px;
+		&:hover {
+			& .cases__arrow {
+				transform: translateX(4px);
+			}
+		}
+	}
+	&__arrow {
+		transition: transform 0.3s ease;
+	}
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		gap: 60px;
+	}
+	&__item {
+		grid-column: 4 span;
+		border-radius: 32px;
+		overflow: hidden;
+		text-decoration: none;
+		background: var(--opp-background-color);
+		display: flex;
+		flex-direction: column;
+		&:hover {
+			& .btn {
+				&__secondary {
+					background: var(--white-color);
+				}
+				&__arrow {
+					transform: translateX(4px);
+				}
+			}
+		}
+	}
+	&__body {
+		padding: 24px 40px 32px;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	&__name {
+		color: var(--main-blue-color);
+		margin-bottom: 12px;
+	}
+	&__type {
+		color: var(--cases-text-color);
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 16px;
+		letter-spacing: -0.02em;
+		margin-bottom: 12px;
+	}
+	&__description {
+		font-size: 13px;
+		line-height: 16px;
+		color: var(--subtitle-color);
+		margin-bottom: 32px;
+	}
+	&__case {
+		font-weight: 700;
+		font-size: 13px;
+		line-height: 16px;
+		color: var(--subtitle-color);
+		margin-top: auto;
+		margin-bottom: 4px;
+	}
+	&__value {
+		font-weight: 600;
+		font-size: 48px;
+		line-height: 56px;
+		letter-spacing: -0.01em;
+		color: var(--main-blue-color);
+		margin-bottom: 24px;
+	}
+	&__image {
+		width: 100%;
+		height: auto;
+	}
+}
+
+@media (max-width: 1024px) {
+	.cases {
+		margin-bottom: 120px;
+		&__body {
+			padding: 18px 24px;
+		}
+		&__list {
+			gap: 20px;
+		}
+		&__item {
+			border-radius: 6px;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.cases {
+		margin-bottom: 60px;
+		&__item {
+			grid-column: 6 span;
+			&:last-child {
+				grid-column: 4 / 10;
+			}
+		}
+	}
+}
+
+@media (max-width: 616px) {
+	.cases {
+		&__list {
+			column-gap: 0;
+		}
+		&__item {
+			grid-column: 12 span;
+			&:last-child {
+				grid-column: 12 span;
+			}
+		}
+	}
+}
